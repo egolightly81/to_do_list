@@ -40,8 +40,6 @@ console.log("script Loaded");
     /* Step 3 make the event trigger our functions
     -----------------------------------------------*/ 
     addTaskButton.addEventListener('click', onAddTaskClicked)
-    todoListContainer.addEventListener('click', onTodolistClicked)
-
-
+    todoListContainer.addEventListener('click', onTodoClicked)
 
 
