@@ -8,23 +8,25 @@ console.log("script Loaded");
     let templateElement = document.getElementById("todo-item-template")
     let template = templateElement.innerHTML
     
+
     /* Step 2. Lets write the function to handle the 'click' event
     ---------------------------------------------------------------*/
+
     function onAddTaskClicked(event){
-        console.log("hello world")
+        console.log("hello world");
         // Get the contents of the input box
         let taskName = newTaskInput.value;
-        console.log(taskName)
+        console.log(taskName);
         // clear the input box 
-        newTaskInput.value = ""
-
+        newTaskInput.value = "";
+    
         // Search and replace to add task name (found above)
-        let = todoHTML = template.replace("<!----TASK_NAME---->", taskName)
-
-        // we have the formatted HML, lets insert it into the to do container 
+        let todoHTML = template.replace("<!----TASK_NAME---->", taskName);
+    
+        // we have the formatted HTML, let's insert it into the to-do container 
         todoListContainer.insertAdjacentHTML('afterbegin', todoHTML);
-
     }
+    
     function onTodoClicked(event){
         let targetElement = event.toElement    
 
