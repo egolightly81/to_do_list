@@ -14,8 +14,6 @@ console.log("script Loaded");
         todoListContainer.insertAdjacentHTML('afterbegin', taskname);
     }
 
-
-    
     /* Step 3 make the event trigger our functions
     -----------------------------------------------*/ 
     addTaskButton.addEventListener('click', onAddTaskClicked);
