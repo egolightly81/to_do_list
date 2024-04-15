@@ -23,7 +23,13 @@ console.log("script Loaded");
         // we have the formatted HML, lets insert it into the to do container 
         todoListContainer.insertAdjacentHTML('afterbegin', taskname);
     }
-    
+    function onTodoClicked(event){
+        let targetElement = event.toElement    
+
+        while(!targetElement.classList.contains("task")){
+            targetElement = targetElement.parentElement
+        }
+    }
     /* Step 3 make the event trigger our functions
     -----------------------------------------------*/ 
     addTaskButton.addEventListener('click', onAddTaskClicked);
