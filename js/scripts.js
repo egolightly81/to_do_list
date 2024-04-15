@@ -29,6 +29,7 @@ console.log("script Loaded");
         while(!targetElement.classList.contains("task")){
             targetElement = targetElement.parentElement
         }
+        let checkbox = targetElement.querySelector(".checkbox")
     }
     /* Step 3 make the event trigger our functions
     -----------------------------------------------*/ 
