@@ -13,7 +13,7 @@ console.log("script Loaded");
     function onAddTaskClicked(event){
         // Get the contents of the input box
         let taskName = newTaskInput.value;
-
+        console.log(taskName)
         // clear the input box 
         newTaskInput.value = ""
 
