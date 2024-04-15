@@ -29,18 +29,21 @@ function onAddTaskClicked(event) {
 function onTodoClicked(event) {
     let targetElement = event.target;
 
-    while (!targetElement.classList.contains("task")) {
+    while (targetElement && !targetElement.classList.contains("task")) {
         targetElement = targetElement.parentElement;
     }
 
-    let checkbox = targetElement.querySelector(".checkbox");
+    if (targetElement) {
+        let checkbox = targetElement.querySelector(".checkbox");
 
-    if (checkbox.checked) {
-        targetElement.classList.add("completed");
-    } else {
-        targetElement.classList.remove("completed");
+        if (checkbox && checkbox.checked) {
+            targetElement.classList.add("completed");
+        } else {
+            targetElement.classList.remove("completed");
+        }
     }
 }
+
 
 /* Step 3 make the event trigger our functions
 -----------------------------------------------*/ 
