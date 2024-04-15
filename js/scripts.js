@@ -21,7 +21,7 @@ console.log("script Loaded");
         let = todoHTML = template.replace("<!----TASK_NAME---->", taskName)
 
         // we have the formatted HML, lets insert it into the to do container 
-        todoListContainer.insertAdjacentHTML('afterbegin', taskname);
+        todoListContainer.insertAdjacentHTML('afterbegin', taskname)
     }
     function onTodoClicked(event){
         let targetElement = event.toElement    
@@ -30,8 +30,17 @@ console.log("script Loaded");
             targetElement = targetElement.parentElement
         }
         let checkbox = targetElement.querySelector(".checkbox")
+        if (checkbox.checked){
+            targetElement.classList.add("completed")
+        } else {
+            targetElement.classList.remove("completed")
+        }
     }
     /* Step 3 make the event trigger our functions
     -----------------------------------------------*/ 
-    addTaskButton.addEventListener('click', onAddTaskClicked);
-    todoListContainer.addEventListener('click', onTodolistClicked);
+    addTaskButton.addEventListener('click', onAddTaskClicked)
+    todoListContainer.addEventListener('click', onTodolistClicked)
+
+
+
+
