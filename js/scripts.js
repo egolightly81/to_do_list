@@ -13,15 +13,17 @@ console.log("script Loaded");
     function onAddTaskClicked(event){
         // Get the contents of the input box
         let taskName = newTaskInput.value;
+
         // clear the input box 
-        newTaskInput.value = "";
+        newTaskInput.value = ""
+
         // Search and replace to add task name (found above)
         let = todoHTML = template.replace("<!----TASK_NAME---->", taskName)
 
         // we have the formatted HML, lets insert it into the to do container 
         todoListContainer.insertAdjacentHTML('afterbegin', taskname);
     }
-
+    
     /* Step 3 make the event trigger our functions
     -----------------------------------------------*/ 
     addTaskButton.addEventListener('click', onAddTaskClicked);
