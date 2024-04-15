@@ -11,6 +11,7 @@ console.log("script Loaded");
     /* Step 2. Lets write the function to handle the 'click' event
     ---------------------------------------------------------------*/
     function onAddTaskClicked(event){
+        console.log("hello world")
         // Get the contents of the input box
         let taskName = newTaskInput.value;
         console.log(taskName)
