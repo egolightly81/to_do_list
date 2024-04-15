@@ -22,7 +22,8 @@ console.log("script Loaded");
         let = todoHTML = template.replace("<!----TASK_NAME---->", taskName)
 
         // we have the formatted HML, lets insert it into the to do container 
-        todoListContainer.insertAdjacentHTML('afterbegin', taskname)
+        todoListContainer.insertAdjacentHTML('afterbegin', todoHTML);
+
     }
     function onTodoClicked(event){
         let targetElement = event.toElement    
